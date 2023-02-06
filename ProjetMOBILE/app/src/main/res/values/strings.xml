@@ -9,4 +9,25 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Page de connexion -->
+    <string name="connexion_page_title">Se connecter</string>
+    <string name="connexion_page_nom">Nom</string>
+    <string name="connexion_page_mdp">Mot de passe</string>
+    <string name="connexion_page_valider">Valider</string>
+    <string name="connexion_page_creation">Créer un compte</string>
+
+    <!-- Page de création de compte -->
+    <string name="creation_page_title">Créer un compte</string>
+    <string name="creation_page_nom">Nom</string>
+    <string name="creation_page_mdp">Mot de passe</string>
+    <string name="creation_page_confirmation">Confirmer mot de passe</string>
+    <string name="creation_page_valider">Valider</string>
+
+    <!-- Page d'accueil -->
+    <string name="accueil_page_title">Accueil</string>
+    <string name="accueil_page_calendrier">Calendrier des terrains</string>
+    <string name="accueil_page_deconnexion">Déconnexion</string>
+
 </resources>
+
