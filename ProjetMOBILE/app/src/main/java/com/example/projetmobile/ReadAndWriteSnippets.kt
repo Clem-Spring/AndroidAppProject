@@ -8,7 +8,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 
-class ReandAndWriteSnippets {
+class ReadAndWriteSnippets {
 
     private lateinit var database: DatabaseReference
 
