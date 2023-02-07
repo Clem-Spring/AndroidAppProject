@@ -9,8 +9,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/barre_bas"
-        android:layout_width="421dp"
-        android:layout_height="57dp"
+        android:layout_width="414dp"
+        android:layout_height="56dp"
         android:background="#05482F"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"

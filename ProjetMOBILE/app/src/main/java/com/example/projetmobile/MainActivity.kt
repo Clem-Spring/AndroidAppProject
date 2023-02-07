@@ -25,6 +25,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val valider = findViewById<Button>(R.id.valider)
+        valider.setOnClickListener {
+            val intentToInscription = Intent(this, inscription::class.java)
+            startActivity(intentToInscription)
+        }
+
         ReadAndWriteSnippets().initializeDbRef()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
