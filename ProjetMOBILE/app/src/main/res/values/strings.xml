@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ProjetMOBILE</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -29,5 +29,13 @@
     <string name="accueil_page_calendrier">Calendrier des terrains</string>
     <string name="accueil_page_deconnexion">Déconnexion</string>
 
+    <string name="valider">VALIDER</string>
+    <string name="Titre">SE CONNECTER</string>
+    <string name="logo">logo</string>
+    <string name="creation_compte">Créer un compte</string>
+    <string name="Mot_de_passe">Mot de passe</string>
+    <string name="text_mdp">Mot de passe</string>
+    <string name="Id_name">Nom</string>
+    <string name="text_Id">Nom</string>
 </resources>
 
