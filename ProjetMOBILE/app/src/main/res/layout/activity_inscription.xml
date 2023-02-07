@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CF5D30"
-    tools:context=".MainActivity">
+    tools:context=".inscription">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/barre_bas"
-        android:layout_width="414dp"
-        android:layout_height="56dp"
+        android:layout_width="421dp"
+        android:layout_height="57dp"
         android:background="#05482F"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -37,9 +37,9 @@
         android:id="@+id/Titre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Titre"
+        android:text="@string/Titre2"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/text_mdp"
@@ -69,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <EditText
         android:id="@+id/Id_name"
@@ -83,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:layout_constraintVertical_bias="0.23000002" />
 
     <TextView
         android:id="@+id/text_Id"
@@ -96,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26" />
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <ImageView
         android:id="@+id/imageView"
