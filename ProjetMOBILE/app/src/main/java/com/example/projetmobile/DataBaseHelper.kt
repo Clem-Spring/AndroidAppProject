@@ -5,6 +5,6 @@ import com.google.firebase.ktx.Firebase
 
 class DataBaseHelper {
     companion object{
-        val database = Firebase.database("https://console.firebase.google.com/project/projetmobile-a1362/database/projetmobile-a1362-default-rtdb/data/~2F")
+        val database = Firebase.database("https://projetmobile-a1362-default-rtdb.firebaseio.com/").reference
     }
 }

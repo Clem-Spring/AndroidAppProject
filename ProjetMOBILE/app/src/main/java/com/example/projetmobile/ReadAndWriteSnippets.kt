@@ -7,10 +7,10 @@ import com.google.firebase.database.ktx.database
 
 import com.google.firebase.ktx.Firebase
 
+private lateinit var database: DatabaseReference
+public class ReadAndWriteSnippets {
 
-class ReadAndWriteSnippets {
 
-    private lateinit var database: DatabaseReference
 
     fun initializeDbRef(){
         database = Firebase.database.reference
@@ -18,8 +18,9 @@ class ReadAndWriteSnippets {
     }
 
     fun writeNewUser(userId: String, name: String, email: String) {
-        val user = User(name, email)
+        val user = User(name, email, userId)
 
-        database.child("users").child(userId).setValue(user)
+        DataBaseHelper.database.child("User").child(userId).setValue(user)
     }
 }
+
