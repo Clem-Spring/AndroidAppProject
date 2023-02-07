@@ -29,6 +29,7 @@
     <string name="accueil_page_calendrier">Calendrier des terrains</string>
     <string name="accueil_page_deconnexion">Déconnexion</string>
 
+    <!-- Page connexion -->
     <string name="valider">VALIDER</string>
     <string name="Titre">SE CONNECTER</string>
     <string name="logo">logo</string>
@@ -37,5 +38,8 @@
     <string name="text_mdp">Mot de passe</string>
     <string name="Id_name">Nom</string>
     <string name="text_Id">Nom</string>
+
+    <!--page créer un compte  -->
+    <string name="Titre2">Créer un compte</string>
 </resources>
 
