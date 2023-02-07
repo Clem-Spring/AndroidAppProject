@@ -1,10 +1,11 @@
 package com.example.projetmobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityMainBinding
-import com.example.projetmobile.model.User
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         ReadAndWriteSnippets().writeNewUser(uid,"Spring","clem83spring@gmail.com")
         createReservation()
     }
+
+
 
     fun createReservation() {
         val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
@@ -75,6 +78,6 @@ class MainActivity : AppCompatActivity() {
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
-        // [END read_message]
     }
+
 }
