@@ -2,9 +2,11 @@ package com.example.projetmobile
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityMainBinding
 import com.example.projetmobile.model.User
+
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -12,7 +14,7 @@ import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
-private lateinit var database: DatabaseReference
+lateinit var database: DatabaseReference
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -24,32 +26,45 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ReadAndWriteSnippets().initializeDbRef()
+        //ReadAndWriteSnippets().initializeDbRef()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val uid = UUID.randomUUID().toString()
-        Log.d("TAG",uid)
-        //ReadAndWriteSnippets().initializeDbRef()
-        //database = FirebaseDatabase.getInstance().getReference("User")
-        ReadAndWriteSnippets().writeNewUser(uid,"Spring","clem83spring@gmail.com")
-        createReservation()
+
+        ReadAndWriteSnippets().initializeDbRef()
+
+
+        buttonListener()
+        //writeNewUserWithTaskListeners("testeur","mailtest@test.test")
+        //createReservation()
+        //basicReadWrite()
+        //ReadAndWriteSnippets().writeNewUser(UUID.randomUUID().toString(),"TestRaW2","test@test.com")
+
     }
 
-    fun createReservation() {
-        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
-        val date = df.format(Date())
+    private fun buttonListener() {
+        binding.button.setOnClickListener {
 
-        val hours = mapOf("12" to "4bf7d5a9-484a-4aed-8c72-431254b2710e")
-        val reservation = Reservation(date, hours)
+            ReadAndWriteSnippets().writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"testeuuur","clem83spring@gmail.com")
+            //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
 
-        DataBaseHelper.database.child("Reservations").child(reservation.date).setValue(reservation)
+        }
     }
 
-    @IgnoreExtraProperties
-    data class Reservation(val date: String, val hours: Map<String, String>) {
-        // Null default values create a no-argument default constructor, which is needed
-        // for deserialization from a DataSnapshot.
-    }
+
+
+    /**fun writeNewUser( name: String, email: String) {
+        val userId = UUID.randomUUID().toString()
+        val user = User(name, email, userId)
+
+        Log.w(TAG, "hehohohe")
+        Log.d(TAG, user.toString())
+        DataBaseHelper.database.reference.child("User").child(name).setValue(user).addOnCompleteListener{
+            Log.w(TAG,"Ok mec")
+        }.addOnFailureListener{err ->
+            Log.w(TAG, "PASCOOL")
+            Toast.makeText(this,"error ${err.message}",Toast.LENGTH_LONG).show()
+        }
+    }**/
 
     fun basicReadWrite() {
         // [START write_message]
