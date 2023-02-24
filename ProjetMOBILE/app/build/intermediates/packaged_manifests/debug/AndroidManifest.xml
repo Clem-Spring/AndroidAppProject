@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.ProjetMOBILE" >
         <activity
+            android:name="com.example.projetmobile.CalendrierActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.projetmobile.reservation"
             android:exported="false" />
         <activity

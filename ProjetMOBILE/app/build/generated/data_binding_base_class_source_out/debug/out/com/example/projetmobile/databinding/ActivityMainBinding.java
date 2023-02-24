@@ -20,10 +20,15 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button buttonCalendrier;
+
+  @NonNull
   public final Button buttonMain;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonMain) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonCalendrier,
+      @NonNull Button buttonMain) {
     this.rootView = rootView;
+    this.buttonCalendrier = buttonCalendrier;
     this.buttonMain = buttonMain;
   }
 
@@ -54,13 +59,19 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.buttonCalendrier;
+      Button buttonCalendrier = ViewBindings.findChildViewById(rootView, id);
+      if (buttonCalendrier == null) {
+        break missingId;
+      }
+
       id = R.id.buttonMain;
       Button buttonMain = ViewBindings.findChildViewById(rootView, id);
       if (buttonMain == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonMain);
+      return new ActivityMainBinding((ConstraintLayout) rootView, buttonCalendrier, buttonMain);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

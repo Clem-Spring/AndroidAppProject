@@ -41,5 +41,55 @@
 
     <!--page créer un compte  -->
     <string name="Titre2">Créer un compte</string>
+
+        <string name="col1">Horaires</string>
+        <string name="col2">Terrain 1</string>
+        <string name="col3">Terrain 2</string>
+        <string name="row1Horaires">7h00 - 8h00</string>
+        <string name="row1Terrain1">1</string>
+        <string name="row1Terrain2">2</string>
+        <string name="row2Horaires">8h00 - 9h00</string>
+        <string name="row2Terrain1">1</string>
+        <string name="row2Terrain2">2</string>
+        <string name="row3Horaires">9h00 - 10h00</string>
+        <string name="row3Terrain1">1</string>
+        <string name="row3Terrain2">2</string>
+        <string name="row4Horaires">10h00 - 11h00</string>
+        <string name="row4Terrain1">1</string>
+        <string name="row4Terrain2">2</string>
+        <string name="row5Horaires">11h00 - 12h00</string>
+        <string name="row5Terrain1">1</string>
+        <string name="row5Terrain2">2</string>
+        <string name="row6Horaires">12h00 - 13h00</string>
+        <string name="row6Terrain1">1</string>
+        <string name="row6Terrain2">2</string>
+        <string name="row7Horaires">13h00 - 14h00</string>
+        <string name="row7Terrain1">1</string>
+        <string name="row7Terrain2">2</string>
+        <string name="row8Horaires">14h00 - 15h00</string>
+        <string name="row8Terrain1">1</string>
+        <string name="row8Terrain2">2</string>
+        <string name="row9Horaires">15h00 - 16h00</string>
+        <string name="row9Terrain1">1</string>
+        <string name="row9Terrain2">2</string>
+        <string name="row10Horaires">16h00 - 17h00</string>
+        <string name="row10Terrain1">1</string>
+        <string name="row10Terrain2">2</string>
+        <string name="row11Horaires">17h00 - 18h00</string>
+        <string name="row11Terrain1">1</string>
+        <string name="row11Terrain2">2</string>
+        <string name="row12Horaires">18h00 - 19h00</string>
+        <string name="row12Terrain1">1</string>
+        <string name="row12Terrain2">2</string>
+        <string name="row13Horaires">19h00 - 20h00</string>
+        <string name="row13Terrain1">1</string>
+        <string name="row13Terrain2">2</string>
+        <string name="row14Horaires">20h00 - 21h00</string>
+        <string name="row14Terrain1">1</string>
+        <string name="row14Terrain2">2</string>
+        <string name="row15Horaires">21h00 - 22h00</string>
+        <string name="row15Terrain1">1</string>
+        <string name="row15Terrain2">2</string>
+
 </resources>
 

@@ -4,7 +4,7 @@
             "outputFile": "com.example.projetmobile.app-mergeDebugResources-47:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/clementspringinsfeld/.gradle/caches/transforms-3/379cb922f80e063738594f8fdf438d7b/transformed/appcompat-1.6.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "C:\\Users\\33642\\.gradle\\caches\\transforms-3\\379cb922f80e063738594f8fdf438d7b\\transformed\\appcompat-1.6.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

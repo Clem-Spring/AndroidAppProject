@@ -28,13 +28,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val valider = findViewById<Button>(R.id.buttonMain)
-        valider.setOnClickListener {
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        binding.buttonMain.setOnClickListener {
             val intentToInscription = Intent(this, inscription::class.java)
             startActivity(intentToInscription)
         }
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.buttonCalendrier.setOnClickListener {
+            val intentToInscription = Intent(this, CalendrierActivity::class.java)
+            startActivity(intentToInscription)
+        }
+
+
 
 
         ReadAndWriteSnippets().initializeDbRef()
