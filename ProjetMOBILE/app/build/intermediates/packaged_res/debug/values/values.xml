@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="Id_name">Nom</string>
+    <string name="Mot_de_passe">Mot de passe</string>
+    <string name="Titre">SE CONNECTER</string>
+    <string name="Titre2">Créer un compte</string>
+    <string name="accueil_page_calendrier">Calendrier des terrains</string>
+    <string name="accueil_page_deconnexion">Déconnexion</string>
+    <string name="accueil_page_title">Accueil</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">ProjetMOBILE</string>
+    <string name="connexion_page_creation">Créer un compte</string>
+    <string name="connexion_page_mdp">Mot de passe</string>
+    <string name="connexion_page_nom">Nom</string>
+    <string name="connexion_page_title">Se connecter</string>
+    <string name="connexion_page_valider">Valider</string>
+    <string name="creation_compte">Créer un compte</string>
+    <string name="creation_page_confirmation">Confirmer mot de passe</string>
+    <string name="creation_page_mdp">Mot de passe</string>
+    <string name="creation_page_nom">Nom</string>
+    <string name="creation_page_title">Créer un compte</string>
+    <string name="creation_page_valider">Valider</string>
+    <string name="default_web_client_id" translatable="false">394683982736-da3tut3vfajlt2e1g3ki6vecsig82nio.apps.googleusercontent.com</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">394683982736</string>
+    <string name="google_api_key" translatable="false">AIzaSyDUupHFzr_q18n92oUt69xbgmazg_2cMB0</string>
+    <string name="google_app_id" translatable="false">1:394683982736:android:91a0e1f988c133ca8c8915</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDUupHFzr_q18n92oUt69xbgmazg_2cMB0</string>
+    <string name="google_storage_bucket" translatable="false">projetmobile-a1362.appspot.com</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="logo">logo</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">projetmobile-a1362</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="text_Id">Nom</string>
+    <string name="text_mdp">Mot de passe</string>
+    <string name="valider">VALIDER</string>
+    <style name="Theme.ProjetMOBILE" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="Theme.ProjetMOBILE.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.ProjetMOBILE.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ProjetMOBILE.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

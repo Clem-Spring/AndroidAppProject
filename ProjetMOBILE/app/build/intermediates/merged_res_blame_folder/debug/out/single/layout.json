@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/fragment_first.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/fragment_second.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/activity_inscription.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/activity_inscription.xml"
+    },
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/activity_reservation.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/activity_reservation.xml"
+    },
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-mergeDebugResources-48:/layout/content_main.xml",
+        "source": "/Users/clementspringinsfeld/.gradle/daemon/7.5/com.example.projetmobile.app-main-51:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.example.projetmobile.app-mergeDebugResources-48:/layout/activity_inscription.xml",
+        "source": "com.example.projetmobile.app-main-51:/layout/activity_inscription.xml"
+    }
+]
