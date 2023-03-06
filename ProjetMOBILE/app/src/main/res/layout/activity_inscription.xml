@@ -37,7 +37,7 @@
         android:id="@+id/Titre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Titre2"
+        android:text="Se connecter"
         android:textColor="#FFFFFF"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
