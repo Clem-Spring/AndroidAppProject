@@ -1,12 +1,13 @@
 package com.example.projetmobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityMainBinding
 import com.example.projetmobile.model.User
-
+import android.widget.Button
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -26,9 +27,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //ReadAndWriteSnippets().initializeDbRef()
+        setContentView(R.layout.activity_main)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
+
+        binding.buttonMain.setOnClickListener {
+            val intentToInscription = Intent(this, inscription::class.java)
+            startActivity(intentToInscription)
+        }
+
+        binding.buttonCalendrier.setOnClickListener {
+            val intentToInscription = Intent(this, CalendrierActivity::class.java)
+            startActivity(intentToInscription)
+        }
+
+
+
 
         ReadAndWriteSnippets().initializeDbRef()
 
@@ -42,28 +58,39 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buttonListener() {
-        binding.button.setOnClickListener {
 
-            ReadAndWriteSnippets().writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"testeuuur","clem83spring@gmail.com")
-            //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
 
-        }
+        //ReadAndWriteSnippets().writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"testeuuur","clem83spring@gmail.com")
+        //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
+
     }
 
 
+    fun createReservation() {
+        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
+        val date = df.format(Date())
+        ReadAndWriteSnippets().writeNewUserWithTaskListeners(
+            UUID.randomUUID().toString(),
+            "testeuuur",
+            "clem83spring@gmail.com"
+        )
+        //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
+
+    }
+
 
     /**fun writeNewUser( name: String, email: String) {
-        val userId = UUID.randomUUID().toString()
-        val user = User(name, email, userId)
+    val userId = UUID.randomUUID().toString()
+    val user = User(name, email, userId)
 
-        Log.w(TAG, "hehohohe")
-        Log.d(TAG, user.toString())
-        DataBaseHelper.database.reference.child("User").child(name).setValue(user).addOnCompleteListener{
-            Log.w(TAG,"Ok mec")
-        }.addOnFailureListener{err ->
-            Log.w(TAG, "PASCOOL")
-            Toast.makeText(this,"error ${err.message}",Toast.LENGTH_LONG).show()
-        }
+    Log.w(TAG, "hehohohe")
+    Log.d(TAG, user.toString())
+    DataBaseHelper.database.reference.child("User").child(name).setValue(user).addOnCompleteListener{
+    Log.w(TAG,"Ok mec")
+    }.addOnFailureListener{err ->
+    Log.w(TAG, "PASCOOL")
+    Toast.makeText(this,"error ${err.message}",Toast.LENGTH_LONG).show()
+    }
     }**/
 
     fun basicReadWrite() {
@@ -90,6 +117,5 @@ class MainActivity : AppCompatActivity() {
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
-        // [END read_message]
     }
 }
