@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonMain.setOnClickListener {
-            val intentToInscription = Intent(this, inscription::class.java)
+            val intentToInscription = Intent(this, Inscription::class.java)
             startActivity(intentToInscription)
         }
 
@@ -43,37 +43,27 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentToInscription)
         }
 
-
+        val snippets = ReadAndWriteSnippets()
 
 
         ReadAndWriteSnippets().initializeDbRef()
 
 
         buttonListener()
-        //writeNewUserWithTaskListeners("testeur","mailtest@test.test")
-        //createReservation()
+        //snippets.writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"Bibou","bibou@clem.com","password")
+
+        //snippets.getUser("bibou@clem.com","password")
+        //snippets.createReservation()
+        //snippets.createBooking()
         //basicReadWrite()
         //ReadAndWriteSnippets().writeNewUser(UUID.randomUUID().toString(),"TestRaW2","test@test.com")
-
+        
     }
 
     private fun buttonListener() {
 
 
         //ReadAndWriteSnippets().writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"testeuuur","clem83spring@gmail.com")
-        //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
-
-    }
-
-
-    fun createReservation() {
-        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
-        val date = df.format(Date())
-        ReadAndWriteSnippets().writeNewUserWithTaskListeners(
-            UUID.randomUUID().toString(),
-            "testeuuur",
-            "clem83spring@gmail.com"
-        )
         //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
 
     }
