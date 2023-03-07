@@ -3,6 +3,7 @@ package com.example.projetmobile
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityMainBinding
@@ -21,6 +22,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
+    private fun buttonListener() {
+        binding.CreaCompte.setOnClickListener {
+            Log.d("CreaCompte", "Click sur le button Créer un compte")
+            Toast.makeText(this, "j'ai cliqué", Toast.LENGTH_LONG).show()
+        }
+    }
+
     companion object {
         private const val TAG = "KotlinActivity"
     }
@@ -38,16 +46,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentToInscription)
         }
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         binding.buttonCalendrier.setOnClickListener {
             val intentToInscription = Intent(this, CalendrierActivity::class.java)
             startActivity(intentToInscription)
         }
-
-
-
-
-        ReadAndWriteSnippets().initializeDbRef()
-
 
         buttonListener()
         //writeNewUserWithTaskListeners("testeur","mailtest@test.test")
@@ -66,56 +70,42 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun createReservation() {
-        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
-        val date = df.format(Date())
-        ReadAndWriteSnippets().writeNewUserWithTaskListeners(
-            UUID.randomUUID().toString(),
-            "testeuuur",
-            "clem83spring@gmail.com"
-        )
-        //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
 
+    private fun switchPage(){
+        val intent = Intent(this,inscription ::class.java)
+        intent.putExtra(inscription.extraKey, TAG)
+        startActivity(intent)
     }
+    override fun onStart() {
+        super.onStart()
+        Log.d( "lifeCycle", "MainActivity onStart")
 
 
     /**fun writeNewUser( name: String, email: String) {
     val userId = UUID.randomUUID().toString()
     val user = User(name, email, userId)
-
-    Log.w(TAG, "hehohohe")
     Log.d(TAG, user.toString())
     DataBaseHelper.database.reference.child("User").child(name).setValue(user).addOnCompleteListener{
     Log.w(TAG,"Ok mec")
     }.addOnFailureListener{err ->
     Log.w(TAG, "PASCOOL")
     Toast.makeText(this,"error ${err.message}",Toast.LENGTH_LONG).show()
+
     }
     }**/
 
-    fun basicReadWrite() {
-        // [START write_message]
-        // Write a message to the database
-        val database = Firebase.database
-        val myRef = database.getReference("message")
+    override fun onResume() {
+        super.onResume()
+        Log.d( "lifeCycle", "MainActivity onResume")
+    }
 
-        myRef.setValue("Hello, World!")
-        // [END write_message]
+    override fun onPause() {
+        super.onPause()
+        Log.d("lifeCycle", "MainActivity onPause")
+    }
 
-        // [START read_message]
-        // Read from the database
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue<String>()
-                Log.d(TAG, "Value is: $value")
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })
+    override fun onDestroy() {
+        Log.d("lifeCycle", "MainActivity onDestroy")
+        super.onDestroy()
     }
 }

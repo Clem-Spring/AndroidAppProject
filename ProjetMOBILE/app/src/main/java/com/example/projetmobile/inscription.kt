@@ -6,25 +6,23 @@ import android.os.Bundle
 import android.widget.Button
 import java.util.UUID
 import android.widget.EditText
+import android.util.Log
+import com.example.projetmobile.databinding.ActivityInscriptionBinding
 
-public class inscription : AppCompatActivity() {
-
-
+class inscription : AppCompatActivity() {
+    private lateinit var binding: ActivityInscriptionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inscription)
-        val valider = findViewById<Button>(R.id.valider)
-        val snippets = ReadAndWriteSnippets()
-
-        valider.setOnClickListener {
-            val editName = findViewById<EditText>(R.id.Id_name)
-            val editPwd = findViewById<EditText>(R.id.Mot_de_passe)
-            val nameText = editName.text.toString()
-            val pwdText = editPwd.text.toString()
+        binding = ActivityInscriptionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
             if (nameText != "" && pwdText != "") {
                 snippets.writeNewUserWithTaskListeners(UUID.randomUUID().toString(), nameText, pwdText)
             }
         }
+    }
+
+    companion object{
+        val extraKey = "extraKey"
     }
 }

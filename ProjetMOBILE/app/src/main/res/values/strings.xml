@@ -41,6 +41,7 @@
 
     <!--page créer un compte  -->
     <string name="Titre2">Créer un compte</string>
+    <string name="text_confirmer_mdp">Confirmer mot de passe</string>
 
         <string name="col1">Horaires</string>
         <string name="col2">Terrain 1</string>
