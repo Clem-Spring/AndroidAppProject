@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-mergeDebugResources-48:\\layout\\activity_calendrier.xml",
+        "source": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-main-51:\\layout\\activity_calendrier.xml"
+    },
+    {
+        "merged": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-mergeDebugResources-48:\\layout\\activity_reservation.xml",
+        "source": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-main-51:\\layout\\activity_reservation.xml"
+    },
+    {
+        "merged": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-mergeDebugResources-48:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-mergeDebugResources-48:\\layout\\activity_inscription.xml",
+        "source": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-main-51:\\layout\\activity_inscription.xml"
+    },
+    {
+        "merged": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-mergeDebugResources-48:\\layout\\content_main.xml",
+        "source": "C:\\Users\\33642\\.gradle\\daemon\\7.5\\com.example.projetmobile.app-main-51:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "com.example.projetmobile.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "com.example.projetmobile.app-main-51:/layout/activity_main.xml"
+    }
+]

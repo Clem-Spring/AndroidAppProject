@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityMainBinding
+import com.example.projetmobile.model.User
+import android.widget.Button
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -14,7 +16,7 @@ import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
-private lateinit var database: DatabaseReference
+lateinit var database: DatabaseReference
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -33,21 +35,38 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val valider = findViewById<Button>(R.id.valider)
-        valider.setOnClickListener {
+        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        binding.buttonMain.setOnClickListener {
             val intentToInscription = Intent(this, inscription::class.java)
             startActivity(intentToInscription)
         }
 
-        //ReadAndWriteSnippets().initializeDbRef()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //val uid = UUID.randomUUID().toString()
-        //Log.d("TAG",uid)
-        //ReadAndWriteSnippets().initializeDbRef()
-        //database = FirebaseDatabase.getInstance().getReference("User")
-        //ReadAndWriteSnippets().writeNewUser(uid,"Spring","clem83spring@gmail.com")
+        binding.buttonCalendrier.setOnClickListener {
+            val intentToInscription = Intent(this, CalendrierActivity::class.java)
+            startActivity(intentToInscription)
+        }
+
+        buttonListener()
+        //writeNewUserWithTaskListeners("testeur","mailtest@test.test")
         //createReservation()
+        //basicReadWrite()
+        //ReadAndWriteSnippets().writeNewUser(UUID.randomUUID().toString(),"TestRaW2","test@test.com")
+
+    }
+
+    private fun buttonListener() {
+
+
+        //ReadAndWriteSnippets().writeNewUserWithTaskListeners(UUID.randomUUID().toString(),"testeuuur","clem83spring@gmail.com")
+        //Toast.makeText(this, "Entrée", Toast.LENGTH_LONG).show()
+
     }
 
 
@@ -60,7 +79,20 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Log.d( "lifeCycle", "MainActivity onStart")
+
+
+    /**fun writeNewUser( name: String, email: String) {
+    val userId = UUID.randomUUID().toString()
+    val user = User(name, email, userId)
+    Log.d(TAG, user.toString())
+    DataBaseHelper.database.reference.child("User").child(name).setValue(user).addOnCompleteListener{
+    Log.w(TAG,"Ok mec")
+    }.addOnFailureListener{err ->
+    Log.w(TAG, "PASCOOL")
+    Toast.makeText(this,"error ${err.message}",Toast.LENGTH_LONG).show()
+
     }
+    }**/
 
     override fun onResume() {
         super.onResume()
@@ -76,5 +108,4 @@ class MainActivity : AppCompatActivity() {
         Log.d("lifeCycle", "MainActivity onDestroy")
         super.onDestroy()
     }
-
 }

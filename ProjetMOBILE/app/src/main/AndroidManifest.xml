@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ProjetMOBILE"
         tools:targetApi="31">
         <activity
+            android:name=".CalendrierActivity"
+            android:exported="false" />
+        <activity
             android:name=".reservation"
             android:exported="false" />
         <activity
