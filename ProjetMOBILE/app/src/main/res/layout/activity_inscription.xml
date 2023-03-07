@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Logo"
         android:layout_width="146dp"
         android:layout_height="151dp"
         android:contentDescription="@string/logo"
@@ -112,7 +112,7 @@
         app:srcCompat="@drawable/_3c84334813aa0c83dce49a107a5bcaf" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/ConfirmMDP"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:ems="10"
@@ -125,7 +125,7 @@
         app:layout_constraintVertical_bias="0.51" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_confirmMDP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_confirmer_mdp"

@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.26" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Logo"
         android:layout_width="146dp"
         android:layout_height="151dp"
         android:contentDescription="@string/logo"
@@ -110,18 +110,18 @@
         app:layout_constraintVertical_bias="0.88"
         app:srcCompat="@drawable/_3c84334813aa0c83dce49a107a5bcaf" />
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/CreaCompte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#05482F"
         android:text="@string/creation_compte"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
