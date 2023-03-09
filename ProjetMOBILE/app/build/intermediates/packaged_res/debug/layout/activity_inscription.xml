@@ -116,7 +116,6 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="@string/Mot_de_passe"
         app:layout_constraintBottom_toBottomOf="@+id/barre_bas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
