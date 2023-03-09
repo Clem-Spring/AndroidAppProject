@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,16 +23,42 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button buttonCalendrier;
+  public final Button CreaCompte;
+
+  @NonNull
+  public final EditText IdName;
+
+  @NonNull
+  public final ImageView Logo;
+
+  @NonNull
+  public final EditText MotDePasse;
+
+  @NonNull
+  public final TextView Titre;
 
   @NonNull
   public final Button buttonMain;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonCalendrier,
-      @NonNull Button buttonMain) {
+  @NonNull
+  public final TextView textId;
+
+  @NonNull
+  public final TextView textMdp;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button CreaCompte,
+      @NonNull EditText IdName, @NonNull ImageView Logo, @NonNull EditText MotDePasse,
+      @NonNull TextView Titre, @NonNull Button buttonMain, @NonNull TextView textId,
+      @NonNull TextView textMdp) {
     this.rootView = rootView;
-    this.buttonCalendrier = buttonCalendrier;
+    this.CreaCompte = CreaCompte;
+    this.IdName = IdName;
+    this.Logo = Logo;
+    this.MotDePasse = MotDePasse;
+    this.Titre = Titre;
     this.buttonMain = buttonMain;
+    this.textId = textId;
+    this.textMdp = textMdp;
   }
 
   @Override
@@ -59,9 +88,33 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonCalendrier;
-      Button buttonCalendrier = ViewBindings.findChildViewById(rootView, id);
-      if (buttonCalendrier == null) {
+      id = R.id.CreaCompte;
+      Button CreaCompte = ViewBindings.findChildViewById(rootView, id);
+      if (CreaCompte == null) {
+        break missingId;
+      }
+
+      id = R.id.Id_name;
+      EditText IdName = ViewBindings.findChildViewById(rootView, id);
+      if (IdName == null) {
+        break missingId;
+      }
+
+      id = R.id.Logo;
+      ImageView Logo = ViewBindings.findChildViewById(rootView, id);
+      if (Logo == null) {
+        break missingId;
+      }
+
+      id = R.id.Mot_de_passe;
+      EditText MotDePasse = ViewBindings.findChildViewById(rootView, id);
+      if (MotDePasse == null) {
+        break missingId;
+      }
+
+      id = R.id.Titre;
+      TextView Titre = ViewBindings.findChildViewById(rootView, id);
+      if (Titre == null) {
         break missingId;
       }
 
@@ -71,7 +124,20 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonCalendrier, buttonMain);
+      id = R.id.text_Id;
+      TextView textId = ViewBindings.findChildViewById(rootView, id);
+      if (textId == null) {
+        break missingId;
+      }
+
+      id = R.id.text_mdp;
+      TextView textMdp = ViewBindings.findChildViewById(rootView, id);
+      if (textMdp == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, CreaCompte, IdName, Logo,
+          MotDePasse, Titre, buttonMain, textId, textMdp);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

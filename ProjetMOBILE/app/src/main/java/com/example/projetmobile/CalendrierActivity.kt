@@ -2,7 +2,10 @@ package com.example.projetmobile
 
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityCalendrierBinding
@@ -17,6 +20,16 @@ class CalendrierActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendrierBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val snippets = ReadAndWriteSnippets()
+
+        val logout = findViewById<Button>(R.id.LogOut)
+        logout.setOnClickListener {
+            currentUser = null;
+            Log.d("Log out", "current = $currentUser")
+            val intentToMainActivity = Intent(this, MainActivity::class.java)
+            startActivity(intentToMainActivity)
+
+        }
 
         val imageview = findViewById<ImageView>(R.id.imageL1T1)
         imageview.setOnClickListener {
@@ -44,4 +57,6 @@ class CalendrierActivity : AppCompatActivity() {
             dpd.show()
         }
     }
+
+
 }

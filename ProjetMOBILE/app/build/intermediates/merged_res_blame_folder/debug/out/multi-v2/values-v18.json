@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.projetmobile.app-mergeDebugResources-47:/values-v18/values-v18.xml",
+            "outputFile": "com.example.projetmobile.app-mergeDebugResources-48:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\33642\\.gradle\\caches\\transforms-3\\379cb922f80e063738594f8fdf438d7b\\transformed\\appcompat-1.6.0\\res\\values-v18\\values-v18.xml",
+                    "source": "/Users/clementspringinsfeld/.gradle/caches/transforms-3/6c15a0353dd7a8bb364c96c88db7742d/transformed/appcompat-1.6.0/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

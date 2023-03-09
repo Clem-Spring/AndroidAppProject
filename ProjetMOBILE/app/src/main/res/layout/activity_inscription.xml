@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CF5D30"
-    tools:context=".inscription">
+    tools:context=".Inscription">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/barre_bas"
@@ -37,8 +37,8 @@
         android:id="@+id/Titre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Se connecter"
-        android:textColor="#FFFFFF"
+        android:text="S'inscrire"
+        android:textColor="#000000"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,6 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="@string/Mot_de_passe"
         app:layout_constraintBottom_toBottomOf="@+id/barre_bas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

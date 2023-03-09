@@ -24,7 +24,13 @@ public final class ActivityInscriptionBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText ConfirmMDP;
+
+  @NonNull
   public final EditText IdName;
+
+  @NonNull
+  public final ImageView Logo;
 
   @NonNull
   public final EditText MotDePasse;
@@ -36,7 +42,7 @@ public final class ActivityInscriptionBinding implements ViewBinding {
   public final Toolbar barreBas;
 
   @NonNull
-  public final ImageView imageView;
+  public final TextView textConfirmMDP;
 
   @NonNull
   public final TextView textId;
@@ -45,24 +51,23 @@ public final class ActivityInscriptionBinding implements ViewBinding {
   public final TextView textMdp;
 
   @NonNull
-  public final TextView textView;
-
-  @NonNull
   public final Button valider;
 
-  private ActivityInscriptionBinding(@NonNull ConstraintLayout rootView, @NonNull EditText IdName,
+  private ActivityInscriptionBinding(@NonNull ConstraintLayout rootView,
+      @NonNull EditText ConfirmMDP, @NonNull EditText IdName, @NonNull ImageView Logo,
       @NonNull EditText MotDePasse, @NonNull TextView Titre, @NonNull Toolbar barreBas,
-      @NonNull ImageView imageView, @NonNull TextView textId, @NonNull TextView textMdp,
-      @NonNull TextView textView, @NonNull Button valider) {
+      @NonNull TextView textConfirmMDP, @NonNull TextView textId, @NonNull TextView textMdp,
+      @NonNull Button valider) {
     this.rootView = rootView;
+    this.ConfirmMDP = ConfirmMDP;
     this.IdName = IdName;
+    this.Logo = Logo;
     this.MotDePasse = MotDePasse;
     this.Titre = Titre;
     this.barreBas = barreBas;
-    this.imageView = imageView;
+    this.textConfirmMDP = textConfirmMDP;
     this.textId = textId;
     this.textMdp = textMdp;
-    this.textView = textView;
     this.valider = valider;
   }
 
@@ -93,9 +98,21 @@ public final class ActivityInscriptionBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ConfirmMDP;
+      EditText ConfirmMDP = ViewBindings.findChildViewById(rootView, id);
+      if (ConfirmMDP == null) {
+        break missingId;
+      }
+
       id = R.id.Id_name;
       EditText IdName = ViewBindings.findChildViewById(rootView, id);
       if (IdName == null) {
+        break missingId;
+      }
+
+      id = R.id.Logo;
+      ImageView Logo = ViewBindings.findChildViewById(rootView, id);
+      if (Logo == null) {
         break missingId;
       }
 
@@ -117,9 +134,9 @@ public final class ActivityInscriptionBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
+      id = R.id.text_confirmMDP;
+      TextView textConfirmMDP = ViewBindings.findChildViewById(rootView, id);
+      if (textConfirmMDP == null) {
         break missingId;
       }
 
@@ -135,20 +152,14 @@ public final class ActivityInscriptionBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
       id = R.id.valider;
       Button valider = ViewBindings.findChildViewById(rootView, id);
       if (valider == null) {
         break missingId;
       }
 
-      return new ActivityInscriptionBinding((ConstraintLayout) rootView, IdName, MotDePasse, Titre,
-          barreBas, imageView, textId, textMdp, textView, valider);
+      return new ActivityInscriptionBinding((ConstraintLayout) rootView, ConfirmMDP, IdName, Logo,
+          MotDePasse, Titre, barreBas, textConfirmMDP, textId, textMdp, valider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

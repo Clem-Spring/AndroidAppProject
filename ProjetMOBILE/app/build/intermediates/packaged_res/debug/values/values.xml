@@ -94,6 +94,7 @@
     <string name="row9Terrain2">2</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="text_Id">Nom</string>
+    <string name="text_confirmer_mdp">Confirmer mot de passe</string>
     <string name="text_mdp">Mot de passe</string>
     <string name="valider">VALIDER</string>
     <style name="Theme.ProjetMOBILE" parent="Theme.MaterialComponents.DayNight.DarkActionBar">

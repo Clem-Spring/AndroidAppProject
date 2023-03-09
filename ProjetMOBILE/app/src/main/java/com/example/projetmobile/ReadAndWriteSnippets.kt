@@ -1,6 +1,10 @@
 package com.example.projetmobile
 
+import android.content.ContentValues.TAG
 import android.util.Log
+import android.widget.EditText
+import android.widget.TextView
+import com.example.projetmobile.model.OccupationDay
 import com.example.projetmobile.model.Reservation
 import com.example.projetmobile.model.User
 import com.google.firebase.database.DataSnapshot
@@ -13,8 +17,9 @@ import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+var currentUser: User? = null
 class ReadAndWriteSnippets {
+
 
 
 
@@ -29,17 +34,19 @@ class ReadAndWriteSnippets {
         DataBaseHelper.database.reference.child("users").child(userId).setValue(user)
     }**/
 
-    fun createReservation() {
+    fun createReservation(heure: String) {
         val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
         val date = df.format(Date())
-        val hours = mapOf("8" to User().userId)
-        val reservation = Reservation(date, hours)
+        val hours = mapOf(heure to currentUser?.userId)
+        val reservation = Reservation(date, hours )
 
         DataBaseHelper.database.reference.child("Reservations").child(reservation.date).setValue(reservation)
     }
 
-    fun writeNewUserWithTaskListeners(userId: String, name: String, email: String) {
-        val user = User(name, email, userId)
+
+
+    fun writeNewUserWithTaskListeners(userId: String, name: String, password: String) {
+        val user = User(name, userId, password)
 
         // [START rtdb_write_new_user_task]
         DataBaseHelper.database.reference.child("users").child(userId).setValue(user)
@@ -55,16 +62,19 @@ class ReadAndWriteSnippets {
 
     fun getUser(email: String, password: String) {
         DataBaseHelper.database.getReference("users")
-            .orderByChild("email")
+            .orderByChild("username")
             .equalTo(email)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     Log.d("dataBase", snapshot.toString())
                     if(snapshot.exists()) {
                         val user = snapshot.children.first().getValue(User::class.java)
-                        if(user?.email == email) { //A changer par le mdp
+                        if(user?.password == password) { //A changer par le mdp
                             Log.d("dataBase","connected")
                             // Connected
+                            currentUser = user
+
+                            Log.i(TAG, "Successfully signed in user ${currentUser?.userId}")
                         }
                     }
 
@@ -75,6 +85,87 @@ class ReadAndWriteSnippets {
                 }
 
             })
+    }
+
+    fun logOut(){
+        currentUser = null
+    }
+
+    fun getCurrentUser(){
+        currentUser?.let { user -> }
+    }
+
+    fun addBooking(){
+        val clickHour=4;
+        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
+        val date = df.format(Date())
+        DataBaseHelper.database.getReference("occupationDays").child(date)
+            .orderByChild("hours")
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    Log.d("dataBase", snapshot.toString())
+                    if(snapshot.exists()) {
+                        var listBooking = snapshot.getValue(OccupationDay::class.java)
+
+                        if (listBooking == null) {
+                            createBooking(clickHour);
+                        }
+
+                        if (listBooking != null) {
+                            listBooking.hours = listBooking.hours.toMutableList()
+
+                            if (listBooking.hours?.get(clickHour) == "" ) {
+
+                                (listBooking.hours as MutableList<String>?)?.set(clickHour, currentUser?.userId.toString())
+                                DataBaseHelper.database.reference.child("occupationDays").child(listBooking.date).setValue(listBooking)
+                                Log.d("dataBase", "booking added")
+
+                            } else {
+                                Log.d("dataBase", "booking already exist")
+                            }
+                            //(listBooking.hours as MutableList<String>?)?.set(clickHour, currentUser?.userId.toString())
+                            //DataBaseHelper.database.reference.child("occupationDays").child(listBooking.date).setValue(listBooking)
+                        }
+
+                    }
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Log.e("dataBase", error.toString())
+                }
+
+            })
+    }
+
+    fun createBooking( ind: Int ) {
+        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
+        val date = df.format(Date())
+        val listBooking = mutableListOf(
+            "", // 7
+            "", // 8
+            "", // 9
+            "", // 10
+            "", // 11
+            "", // 12
+            "", // 13
+            "", // 14
+            "", // 15
+            "", // 16
+            "", // 17
+            "", // 18
+            "", // 19
+            "", // 20
+            "", // 21
+        )
+
+        listBooking[ind] = currentUser?.userId.toString()
+
+        val occupationDay = OccupationDay(
+            date,
+            listBooking)
+
+        DataBaseHelper.database.reference.child("occupationDays").child(occupationDay.date).setValue(occupationDay)
     }
 }
 
