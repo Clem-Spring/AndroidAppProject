@@ -11,11 +11,20 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.projetmobile.databinding.ActivityCalendrierBinding
 import com.example.projetmobile.databinding.ActivityMainBinding
 import java.util.*
+import android.view.View
 
 class CalendrierActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalendrierBinding
-
+    private val changeImageClickListener = View.OnClickListener { view ->
+        if (view is ImageView) {
+            if (view.drawable.constantState == resources.getDrawable(R.drawable.ballebleue).constantState) {
+                view.setImageResource(R.drawable.balleverte)
+            } else {
+                view.setImageResource(R.drawable.ballebleue)
+            }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendrierBinding.inflate(layoutInflater)
@@ -56,6 +65,11 @@ class CalendrierActivity : AppCompatActivity() {
 
             dpd.show()
         }
+        val imageview1 = findViewById<ImageView>(R.id.imageL1T1)
+        imageview1.setOnClickListener(changeImageClickListener)
+
+        val imageview2 = findViewById<ImageView>(R.id.imageView2)
+        imageview2.setOnClickListener(changeImageClickListener)
     }
 
 
