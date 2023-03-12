@@ -135,8 +135,8 @@ class ReadAndWriteSnippets {
         currentUser?.let { user -> }
     }
 
-    fun addBooking(){
-        val clickHour=1;
+    fun addBooking(hour: String){
+        val clickHour = hour.toInt()
         val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
         val date = df.format(Date())
         DataBaseHelper.database.getReference("occupationDays").child(date)

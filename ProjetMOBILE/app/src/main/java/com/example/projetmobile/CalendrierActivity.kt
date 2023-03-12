@@ -28,9 +28,12 @@ class CalendrierActivity : AppCompatActivity() {
                 view.setImageResource(R.drawable.ballebleue)
                 Log.d("setImage",stDate)
 
+                ReadAndWriteSnippets().createReservation(view.tag.toString(),stDate)
+                ReadAndWriteSnippets().addBooking(view.tag.toString())
             }
         }
     }
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +49,8 @@ class CalendrierActivity : AppCompatActivity() {
             startActivity(intentToMainActivity)
 
         }
+
+
 
 
 
@@ -80,6 +85,63 @@ class CalendrierActivity : AppCompatActivity() {
 
         val imageview2 = findViewById<ImageView>(R.id.imageView2)
         imageview2.setOnClickListener(changeImageClickListener)
+
+        val imageview3 = findViewById<ImageView>(R.id.imageView3)
+        imageview3.setOnClickListener(changeImageClickListener)
+        val imageview4 = findViewById<ImageView>(R.id.imageView4)
+        imageview4.setOnClickListener(changeImageClickListener)
+        val imageview5 = findViewById<ImageView>(R.id.imageView5)
+        imageview5.setOnClickListener(changeImageClickListener)
+        val imageview6 = findViewById<ImageView>(R.id.imageView6)
+        imageview6.setOnClickListener(changeImageClickListener)
+        val imageview7 = findViewById<ImageView>(R.id.imageView7)
+        imageview7.setOnClickListener(changeImageClickListener)
+        val imageview8 = findViewById<ImageView>(R.id.imageView8)
+        imageview8.setOnClickListener(changeImageClickListener)
+        val imageview9 = findViewById<ImageView>(R.id.imageView9)
+        imageview9.setOnClickListener(changeImageClickListener)
+        val imageview10 = findViewById<ImageView>(R.id.imageView10)
+        imageview10.setOnClickListener(changeImageClickListener)
+        val imageview11 = findViewById<ImageView>(R.id.imageView11)
+        imageview11.setOnClickListener(changeImageClickListener)
+        val imageview12 = findViewById<ImageView>(R.id.imageView12)
+        imageview12.setOnClickListener(changeImageClickListener)
+        val imageview13 = findViewById<ImageView>(R.id.imageView13)
+        imageview13.setOnClickListener(changeImageClickListener)
+        val imageview14 = findViewById<ImageView>(R.id.imageView14)
+        imageview14.setOnClickListener(changeImageClickListener)
+        val imageview15 = findViewById<ImageView>(R.id.imageView15)
+        imageview15.setOnClickListener(changeImageClickListener)
+        val imageview16 = findViewById<ImageView>(R.id.imageView16)
+        imageview16.setOnClickListener(changeImageClickListener)
+        val imageview17 = findViewById<ImageView>(R.id.imageView17)
+        imageview17.setOnClickListener(changeImageClickListener)
+        val imageview18 = findViewById<ImageView>(R.id.imageView18)
+        imageview18.setOnClickListener(changeImageClickListener)
+        val imageview19 = findViewById<ImageView>(R.id.imageView19)
+        imageview19.setOnClickListener(changeImageClickListener)
+        val imageview20 = findViewById<ImageView>(R.id.imageView20)
+        imageview20.setOnClickListener(changeImageClickListener)
+        val imageview21 = findViewById<ImageView>(R.id.imageView21)
+        imageview21.setOnClickListener(changeImageClickListener)
+        val imageview22 = findViewById<ImageView>(R.id.imageView22)
+        imageview22.setOnClickListener(changeImageClickListener)
+        val imageview23 = findViewById<ImageView>(R.id.imageView23)
+        imageview23.setOnClickListener(changeImageClickListener)
+        val imageview24 = findViewById<ImageView>(R.id.imageView24)
+        imageview24.setOnClickListener(changeImageClickListener)
+        val imageview25 = findViewById<ImageView>(R.id.imageView25)
+        imageview25.setOnClickListener(changeImageClickListener)
+        val imageview26 = findViewById<ImageView>(R.id.imageView26)
+        imageview26.setOnClickListener(changeImageClickListener)
+        val imageview27 = findViewById<ImageView>(R.id.imageView27)
+        imageview27.setOnClickListener(changeImageClickListener)
+        val imageview28 = findViewById<ImageView>(R.id.imageView28)
+        imageview28.setOnClickListener(changeImageClickListener)
+        val imageview29 = findViewById<ImageView>(R.id.imageView29)
+        imageview29.setOnClickListener(changeImageClickListener)
+        val imageview30 = findViewById<ImageView>(R.id.imageView30)
+        imageview30.setOnClickListener(changeImageClickListener)
 
 
     }

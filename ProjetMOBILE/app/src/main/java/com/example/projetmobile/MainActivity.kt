@@ -2,6 +2,8 @@ package com.example.projetmobile
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +15,7 @@ import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.awaitAll
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -45,14 +48,18 @@ class MainActivity : AppCompatActivity() {
 
 
             snippets.getUser(nameText, pwdText)
+            Handler().postDelayed({
+                if ( currentUser?.username != null && currentUser?.password != null) {
+                    val intentToCalendrierActivity = Intent(this, CalendrierActivity::class.java)
+                    startActivity(intentToCalendrierActivity)
+                }
+                else {
 
-            if ( currentUser?.username != null && currentUser?.password != null) {
-                val intentToCalendrierActivity = Intent(this, CalendrierActivity::class.java)
-                startActivity(intentToCalendrierActivity)
-            }
-            else {
-                Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_LONG).show()
-            }
+                    Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_LONG).show()
+                }
+            }, 1000)
+
+
 
 
         }
