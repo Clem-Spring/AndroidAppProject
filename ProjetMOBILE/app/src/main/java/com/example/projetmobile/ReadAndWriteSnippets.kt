@@ -2,8 +2,6 @@ package com.example.projetmobile
 
 import android.content.ContentValues.TAG
 import android.util.Log
-import android.widget.EditText
-import android.widget.TextView
 import com.example.projetmobile.model.OccupationDay
 import com.example.projetmobile.model.Reservation
 import com.example.projetmobile.model.User
@@ -11,6 +9,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
 
 
 import com.google.firebase.ktx.Firebase
@@ -34,14 +33,59 @@ class ReadAndWriteSnippets {
         DataBaseHelper.database.reference.child("users").child(userId).setValue(user)
     }**/
 
-    fun createReservation(heure: String) {
-        val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
-        val date = df.format(Date())
+    fun createReservation(heure: String, date: String) {
+        //val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
+        //val date = df.format(Date())
         val hours = mapOf(heure to currentUser?.userId)
         val reservation = Reservation(date, hours )
+        Log.d("test",date)
 
         DataBaseHelper.database.reference.child("Reservations").child(reservation.date).setValue(reservation)
     }
+
+    fun deleteReservation(heure: String, date: String){
+        val hour = mapOf(heure to currentUser?.userId)
+        DataBaseHelper.database.getReference("Reservations").orderByChild("date")
+            .equalTo(currentUser?.userId)
+            .addListenerForSingleValueEvent(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot){
+                    if (snapshot.exists()){
+                        snapshot.ref.removeValue()
+                        Log.d("dataBase","reservation deleted")
+                    }
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Log.e("dataBase", error.toString())
+                }
+            })
+    }
+
+    fun removeFromBooking(heure: String, date: String){
+        DataBaseHelper.database.getReference("occupationDays").orderByChild("date")
+            .equalTo(date)
+            .addListenerForSingleValueEvent(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot){
+                    if (snapshot.exists()){
+                        snapshot.ref.removeValue()
+                        val book = snapshot.children.first().getValue(OccupationDay::class.java)
+                        for (i in book?.hours!!) {
+                            if (i == currentUser?.userId) {
+
+                            }
+                        }
+                        Log.d("dataBase","reservation deleted")
+                    }
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Log.e("dataBase", error.toString())
+                }
+            })
+    }
+
 
 
 
@@ -87,16 +131,12 @@ class ReadAndWriteSnippets {
             })
     }
 
-    fun logOut(){
-        currentUser = null
-    }
-
     fun getCurrentUser(){
         currentUser?.let { user -> }
     }
 
     fun addBooking(){
-        val clickHour=4;
+        val clickHour=1;
         val df = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE)
         val date = df.format(Date())
         DataBaseHelper.database.getReference("occupationDays").child(date)

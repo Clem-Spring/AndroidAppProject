@@ -100,7 +100,7 @@
                 android:layout_width="90dp"
                 android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                app:srcCompat="@drawable/ballebleue" />
+                app:srcCompat="@drawable/balleverte" />
 
         </TableRow>
 
@@ -116,25 +116,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row2Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row2Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -149,25 +143,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row3Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row3Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -182,25 +170,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row4Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row4Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -215,25 +197,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row5Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row5Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -248,25 +224,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row6Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row6Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -281,25 +251,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row7Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row7Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -314,25 +278,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row8Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row8Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -347,25 +305,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row9Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row9Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -380,25 +332,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row10Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row10Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -413,25 +359,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row11Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row11Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -446,25 +386,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row12Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row12Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -479,25 +413,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row13Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView26"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row13Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -512,25 +440,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row14Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row14Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
         <TableRow>
@@ -545,25 +467,19 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView29"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row15Terrain1"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+            <ImageView
+                android:id="@+id/imageView30"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="@string/row15Terrain2"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                app:srcCompat="@drawable/balleverte" />
         </TableRow>
 
 
